@@ -1,0 +1,28 @@
+/* Картинки в тексте */
+.text {
+    margin: 0px 0px 80px 0px;
+}
+
+/* Контейнер в картинке */
+.text_image {
+    margin: 0px 0px 20px 0px;
+    text-align: center;
+}
+
+/* Картинка */
+.text_image img{
+    max-width: 100%;
+}
+.text_value{}
+.text_value p{
+    margin: 0px 0px 20px 0px;
+}
+
+/* Картинки в карточке */
+.cards {
+    margin: 0px 0px 70px 0px
+}
+.cards_row{
+    margin: 0px -15px 70px -15px
+    display: flex;
+}

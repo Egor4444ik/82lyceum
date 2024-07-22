@@ -1,0 +1,55 @@
+@import url(https://fonts.googleapis.com/css?family=Russo+One);
+.logotype4 {
+    position: relative;
+    color: #0a0a0a;
+    letter-spacing: 3px;
+    display: inline-block;
+    line-height: 50px;
+    font-size: 54px;
+    font-family: 'Russo One', sans-serif;
+    font-variant: small-caps;
+    transition: color 0.3s ease-in-out;
+    text-shadow: 1px 1px #fffcf5, 3px 3px;
+    margin-top:-25px;
+    margin-bottom:20px;
+}
+.logotype4 b {
+    font-variant: normal;
+}
+.logotype4 div {
+    position: absolute;
+    font-size: 24px;
+    text-shadow: 1px 1px #2ecc71;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0;
+    left: 0;
+    white-space: nowrap;
+    transform: translateX(0);
+}
+.logotype4:hover {
+    text-shadow: 1px 1px #0a0a0a, 3px 3px;
+    color: #fffcf5;
+}
+.logotype4:hover div {
+    left: 100%;
+    transform: translateX(-100%);
+}
+@media (max-width:600px) {
+    .logotype4, .logotype4:hover {
+        font-size: 32px;
+        line-height: 32px;
+    }
+    .logotype4 b {
+        font-size: 32px;
+    }
+    .logotype4 div {
+        font-size: 18px;
+    }
+}
+
+.title span {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the text horizontally */
+    font-family: 'Russo One', sans-serif;
+}

@@ -1,0 +1,71 @@
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link_wrapper{
+  position: relative;
+}
+
+a{
+  display: inline-block;
+  width: 700px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all .35s;
+  white-space: nowrap
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .35s;
+  white-space: nowrap
+}
+
+.icon svg{
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #2ecc71;
+  transition: all .35s;
+  white-space: nowrap
+}
+
+a:hover{
+  width: 500px;
+  height: 100px;
+  line-height: 100px;
+  border: 3px solid #2ecc71;
+  background: transparent;
+  color: #2ecc71;
+  white-space: nowrap
+}
+
+a:hover + .icon{
+  border: 3px solid #2ecc71;
+  right: -25%;
+  white-space: nowrap
+}

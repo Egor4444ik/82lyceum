@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Приборная панель{% endblock %}
+
+{% block content %}
+    <center>
+        <h1>Приборная панель</h1>
+
+        <div class="text_image">
+            <img src="{% static 'img/n.jpg' %}" alt="ща картинка загрузится">
+        </div>
+
+        <ul style="display: inline">
+            <a class="menue" style="width: 250px; text-align: center" href="{% url 'password_change' %}">Изменить логин</a>
+        </ul>
+
+        <ul style="display: inline">
+            <a href="{% url 'score' %}">Посмотреть результаты когнетивных тестов</a>
+        </ul>
+    </center>
+
+{% endblock %}

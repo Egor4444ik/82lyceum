@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/buttons.css' %}" rel="stylesheet">
+    <link href="{% static 'css/img.css' %}" rel="stylesheet">
+    <link href="{% static 'css/logo.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <div class="logotype4" style="margin-top:-5px">
+            <div class="title span">
+                <b style= "font-size:36px">
+                    Лицей №82
+                </b>
+            </div>
+            <span style="font-size:28px;margin-top:-20px">
+                Петроградского района г.Санкт-Петербурга
+            </span>
+        </div>
+
+        {% if request.user.is_authenticated %}
+            <ul class="menu">
+                <li {% if section == 'dashboard' %}class="selected"{% endif %}>
+                    <a style="display:block;width:250px" href="{% url 'dashboard' %}">Приборная панель</a>
+                </li>
+            </ul>
+        {% endif %}
+
+        <span class="user">
+            {% if request.user.is_authenticated %}
+
+                <a style="display:block;width:100px" href="{% url 'logout' %}">Выйти</a>
+            {% else %}
+                <a style="display:block;width:100px" href="{% url 'login' %}">Войти</a>
+            {% endif %}
+        </span>
+
+    </div>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">
+                    {{ message|safe }}
+                    <a href="#" class="close">x</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <div id="content">
+
+    {% block content %}
+    {% endblock %}
+
+    </div>
+</body>
+</html>

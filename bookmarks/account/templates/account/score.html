@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Успехи{% endblock %}
+
+{% block content %}
+    <center>
+        <h1>Успехи и прогресс за все года (от начала к концу)</h1>
+        {% if results is not none %}
+            {% with grade=0 %}
+                {% for result in results %}
+                    {% if result is not none %}
+                        <div class="results">
+                            <p>Ваш прогресс за {{ grade.gradefunc }} класс: {{ result }} баллов</p>
+                            {% if result  >= 0 and result <= 25 %}
+                                <p>Предрасположенность к гуманитарной специальности</p>
+                            {% elif result > 25 and result <= 50 %}
+                                <p>Предрасположенность к социально-экономической специальности</p>
+                            {% elif result > 50 and result <= 75 %}
+                                <p>Предрасположенность к чему-то ещё</p>
+                            {% elif result > 75 and result <= 100 %}
+                                <p>Предрасположенность к технической специальности</p>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endwith %}
+        {% endif %}
+
+        {% if show_result %}
+            <img src="data:image/png; base64, {{show_result|safe}}" alt="" style="width:800px">
+        {% endif %}
+    </center>
+{% endblock%}
