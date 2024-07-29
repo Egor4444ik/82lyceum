@@ -1,8 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
-from .forms import LoginForm, UserRegistrationForm, \
-    UserEditForm
+from .forms import LoginForm, UserRegistrationForm, UserEditForm
 from django.contrib.auth.decorators import login_required
 from .models import Score
 from django.contrib import messages

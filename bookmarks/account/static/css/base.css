@@ -19,8 +19,11 @@ a {
 }
 
 a:hover {
-    color:#00a74f;
+    /*color:#00a74f;*/
     font-family: 'Russo One', sans-serif;
+}
+.white_hover:hover{
+    color:#00a74f;
 }
 
 h1, h2, h3, h4, h5 , h6 { font-family: 'Muli', sans-serif; font-weight:normal; }
@@ -87,12 +90,11 @@ b {
 }
 
 #header a {
-    color:#f3f7cc;
+    /*color:#f3f7cc;*/
     font-family: 'Russo One', sans-serif;
 }
 #header a:hover {
-    color:#fff;
-    font-family: 'Russo One', sans-serif;
+   /* color:#fff;*/
 }
 
 #header .user {
