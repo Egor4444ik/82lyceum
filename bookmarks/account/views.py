@@ -103,10 +103,6 @@ def student_score(request):
     if request.user.is_authenticated:
         user_data = Score.objects.get(user = request.user)
 
-        def gradefunc(count):
-            count+=1
-            return count
-
         try:
             result_1_year = user_data.result1
             result_2_year = user_data.result2
@@ -129,7 +125,7 @@ def student_score(request):
                        result_6_year, result_7_year, result_8_year, result_9_year, result_10_year,
                        result_11_year,]
 
-            return render(request, 'account/score.html', {'results': results, 'show_result': graph_of_score, 'gradefunc': gradefunc(count)})
+            return render(request, 'account/score.html', {'results': results, 'show_result': graph_of_score})
         except Score.DoesNotExist:
             return render(request, 'account/score.html', {'error': 'Запись не найдена'})
     else:

@@ -20,7 +20,7 @@
     font-size: 54px;
     font-family: 'Russo One', sans-serif;
     font-variant: small-caps;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.05s ease-in-out;
     text-shadow: 1px 1px #fffcf5, 3px 3px;
     margin-top:-25px;
     margin-bottom:20px;
@@ -38,7 +38,7 @@
     position: absolute;
     font-size: 24px;
     text-shadow: 1px 1px #2ecc71;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.05s ease-in-out;
     letter-spacing: 0;
     left: 0;
     white-space: nowrap;
@@ -46,23 +46,23 @@
 }
 
 .logotype4:hover div {
-    left: 100%;
-    transform: translateX(20%);
+    left: 80%;
+    transform: translateX(0%);
 }
 
 .logotype4 h2 {
     position: relative;
     font-size: 24px;
     text-shadow: 1px 1px #2ecc71;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.05s ease-in-out;
     letter-spacing: 0;
-    left: 45%;
+    left: 20%;
     white-space: nowrap;
     transform: translateX(0);
 }
 
 .logotype4:hover h2 {
-    left: 100%;
+    left: 50%;
     transform: translateX(-100%);
 }
 
